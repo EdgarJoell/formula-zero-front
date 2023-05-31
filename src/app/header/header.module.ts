@@ -10,6 +10,9 @@ import { HeaderPageComponent } from './header-page/header-page.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    HeaderPageComponent
   ]
 })
 export class HeaderModule { }
