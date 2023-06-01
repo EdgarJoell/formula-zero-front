@@ -12,6 +12,9 @@ import { HomeSectionsModule } from './home-sections/home-sections.module';
   imports: [
     CommonModule,
     HomeSectionsModule
+  ],
+  exports: [
+    HomeComponent
   ]
 })
 export class HomePageModule { }
