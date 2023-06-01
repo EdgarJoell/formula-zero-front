@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderPageComponent } from './header-page/header-page.component';
+import { HeaderSectionsModule } from './header-sections/header-sections.module';
 
 
 
@@ -9,7 +10,8 @@ import { HeaderPageComponent } from './header-page/header-page.component';
     HeaderPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HeaderSectionsModule
   ],
   exports: [
     HeaderPageComponent
