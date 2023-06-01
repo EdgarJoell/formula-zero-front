@@ -14,6 +14,11 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    AboutSectionComponent,
+    ExperiencesSectionComponent,
+    HeroSectionComponent
   ]
 })
 export class HomeSectionsModule { }
