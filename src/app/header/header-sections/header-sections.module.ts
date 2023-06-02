@@ -4,6 +4,7 @@ import { LogoComponent } from './logo/logo.component';
 import { NavLinksComponent } from './nav-links/nav-links.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { NavLinksTwoComponent } from './nav-links-two/nav-links-two.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 
 
@@ -15,7 +16,8 @@ import { NavLinksTwoComponent } from './nav-links-two/nav-links-two.component';
     NavLinksTwoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
     LogoComponent,
