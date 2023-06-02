@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
@@ -18,7 +19,8 @@ import { ExperiencesPageModule } from './experiences-page/experiences-page.modul
     FooterModule,
     HomePageModule,
     ExperiencesPageModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
