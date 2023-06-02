@@ -29,12 +29,8 @@ p {
    margin: auto;
 }
 
-/* .text-area {
-   margin-left: 5rem;
-} */
-
 #container {
-   background-image: url("../../../../assets/home-page-images/street-background.png");
+   background-image: url("../../../../assets/home-page-images/strret-background.png");
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
