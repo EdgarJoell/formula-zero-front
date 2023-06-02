@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AboutSectionComponent } from './about-section/about-section.component';
 import { ExperiencesSectionComponent } from './experiences-section/experiences-section.component';
 import { HeroSectionComponent } from './hero-section/hero-section.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 
 
@@ -13,7 +14,8 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
     HeroSectionComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
     AboutSectionComponent,
