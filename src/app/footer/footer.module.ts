@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterPageComponent } from './footer-page/footer-page.component';
+import { FooterSectionsModule } from './footer-sections/footer-sections.module';
 
 
 
@@ -9,7 +10,8 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     FooterPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FooterSectionsModule
   ],
   exports: [
     FooterPageComponent
