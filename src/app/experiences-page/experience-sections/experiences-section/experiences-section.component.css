@@ -1,0 +1,13 @@
+#container {
+   background-image: url("../../../../assets/experience-page-images/Backgroundimage.png");
+   background-position: center;
+   background-repeat: repeat;
+   background-size: cover;
+   width: 100%;
+   height: 60rem;
+}
+
+#experience-packages {
+   width: 100rem;
+   height: 60rem;
+}
