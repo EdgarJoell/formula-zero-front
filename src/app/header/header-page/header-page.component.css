@@ -4,3 +4,7 @@
    justify-content: space-between;
    margin-top: 1rem;
 }
+
+#logo {
+   margin-left: -20rem;
+}
