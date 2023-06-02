@@ -8,6 +8,7 @@ import { FooterModule } from './footer/footer.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageModule } from './home-page/home-page.module';
 import { ExperiencesPageModule } from './experiences-page/experiences-page.module';
+import { ExperiencesService } from './services/experiences-api.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { ExperiencesPageModule } from './experiences-page/experiences-page.modul
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ExperiencesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
