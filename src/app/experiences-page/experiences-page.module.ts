@@ -12,6 +12,9 @@ import { ExperienceSectionsModule } from './experience-sections/experience-secti
   imports: [
     CommonModule,
     ExperienceSectionsModule
+  ],
+  exports: [
+    ExperienceComponent
   ]
 })
 export class ExperiencesPageModule { }
