@@ -2,7 +2,7 @@
    <div id="experience-packages">
       <div class="package" *ngFor="let experience of experiences">
          <!-- <div class="image-placeholder" style="background-color: royalblue;"></div> -->
-         <img class="image-placeholder" src="{ experience.imageString }">
+         <img class="image-placeholder" src="{{ experience.imageString }}">
          <div class="text-area">
             <div class="headings">
                <h2>{{ experience.trackName }}</h2>

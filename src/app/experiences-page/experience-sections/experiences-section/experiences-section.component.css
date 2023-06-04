@@ -22,14 +22,7 @@ p {
    justify-content: space-around;
    align-items: center;
    background-color: white;
-}
-
-.headings {
-   /* margin: -4rem auto auto auto; */
-}
-
-.paragraph {
-   /* margin-top: -1rem; */
+   margin-right: 2rem;
 }
 
 .paragraphs {
@@ -37,15 +30,16 @@ p {
 }
 
 .image-placeholder {
-   width: 17rem; 
-   height: 12rem;
+   width: 24rem; 
+   height: 18rem;
 }
 
 .text-area {
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: space-between
+   justify-content: space-between;
+   margin-left: -2rem;
 }
 
 .price {
