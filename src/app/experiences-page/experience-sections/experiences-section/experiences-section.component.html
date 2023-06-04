@@ -1,7 +1,19 @@
 <div id="container">
    <div id="experience-packages">
       <div class="package" *ngFor="let experience of experiences">
-         {{ experience.trackName }}
+         <!-- <div class="image-placeholder" style="background-color: royalblue;"></div> -->
+         <img class="image-placeholder" src="{ experience.imageString }">
+         <div class="text-area">
+            <div class="headings">
+               <h2>{{ experience.trackName }}</h2>
+               <h5>{{ experience.country }}</h5>
+            </div>
+            <div class="paragraphs">
+               <p class="price">${{ experience.price }}</p>
+               <p class="paragraph">**Per Person USD</p>
+            </div>
+            <a ><button id="button">See Experience!</button></a>
+         </div>
       </div>
    </div>
 </div>
