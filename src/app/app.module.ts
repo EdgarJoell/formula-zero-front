@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomePageModule } from './home-page/home-page.module';
 import { ExperiencesPageModule } from './experiences-page/experiences-page.module';
 import { ExperiencesService } from './services/experiences-api.service';
+import { CartPageModule } from './cart-page/cart-page.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ExperiencesService } from './services/experiences-api.service';
     HomePageModule,
     ExperiencesPageModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CartPageModule
   ],
   providers: [ExperiencesService],
   bootstrap: [AppComponent]
