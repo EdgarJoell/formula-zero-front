@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IndividualExperiencesComponent } from './individual-experiences/individual-experiences.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 
 
@@ -9,7 +10,8 @@ import { IndividualExperiencesComponent } from './individual-experiences/individ
     IndividualExperiencesComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
     IndividualExperiencesComponent

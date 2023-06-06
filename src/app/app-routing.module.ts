@@ -14,7 +14,7 @@ const routes: Routes = [
       component: ExperienceComponent
    },
    {
-      path: 'experiences/:id',
+      path: 'experience-details/:id',
       component: IndividualExperiencesComponent
    }
 

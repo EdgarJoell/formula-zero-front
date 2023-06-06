@@ -12,7 +12,8 @@
                <p class="price">${{ experience.price }}</p>
                <p class="paragraph">**Per Person USD</p>
             </div>
-            <a ><button id="button">See Experience!</button></a>
+            <!-- <a (click)="viewExperienceData(experience.id)"><button id="button">See Experience!</button></a> -->
+            <a routerLink="/experience-details/{{ experience.id }}"><button id="button">See Experience!</button></a>
          </div>
       </div>
    </div>

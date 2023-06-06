@@ -6,9 +6,17 @@ import { Injectable } from '@angular/core';
 export class ExperiencesService {
    constructor(private http: HttpClient) { }
 
+   experiences = this.getAllExperiences();
+
    getAllExperiences() {
       return this.http.get(
         `http://localhost:8080/api/experiences/`
       );
    } 
+
+   getOneExperience(experienceId: number) {
+      return this.http.get(
+         `http://localhost:8080/api/experiences/${experienceId}/`
+      );
+   }
 }
