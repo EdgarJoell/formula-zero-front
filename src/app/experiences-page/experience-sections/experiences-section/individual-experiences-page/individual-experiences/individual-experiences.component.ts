@@ -8,24 +8,15 @@ import { ExperiencesService } from 'src/app/services/experiences-api.service';
   styleUrls: ['./individual-experiences.component.css']
 })
 export class IndividualExperiencesComponent implements OnInit{
- 
-  // public id: string | null;
-  // experience: any;
-
-  // constructor(private route: ActivatedRoute, private router: Router, private experiencesService: ExperiencesService) {
-  //   this.id = this.route.snapshot.paramMap.get('id');
-  // } 
-
-  // ngOnInit(): void {
-  //   this.route.paramMap.subscribe(data => {
-  //     this.id = data.get('id'); 
-  //     this.experience = this.experiencesService.getOneExperience(parseInt(newId));
-  //   });
-  // }
-
+  experiences: any;
   experience: any ;
 
   constructor(private route: ActivatedRoute, private experiencesService: ExperiencesService) { }
+  links: any = document.querySelectorAll('other-tracks-links');
+  
+  aGenericFunction(this: any, key: string) {
+    return this.doStuff(key);
+  }
 
   ngOnInit(): void {
     this.experience = this.route.snapshot.paramMap.get('id');
@@ -33,5 +24,8 @@ export class IndividualExperiencesComponent implements OnInit{
       this.experience = p;
       console.log(p);
     });
+    this.experiencesService.getAllExperiences().subscribe(p => {this.experiences = p
+      console.log(p);
+      });
   }
 }

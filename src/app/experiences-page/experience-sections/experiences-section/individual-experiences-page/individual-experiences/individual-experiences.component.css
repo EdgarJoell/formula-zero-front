@@ -1,0 +1,59 @@
+h1 { 
+   font-size: 40pt;
+}
+
+button {
+   background-color: #CA1004;
+   color: white;
+   width: 10rem;
+   height: 4rem;
+   border-radius: 30px;
+   font-size: 18pt;
+}
+
+p {
+   font-size: 18pt;;
+}
+
+select {
+   margin-bottom: 2rem;
+   width: 15rem;
+   height: 3rem;
+   font-size: 14pt;
+}
+
+.presenter {
+   width: 60rem;
+   height: 40rem;
+}
+
+.other-tracks-images {
+   height: 12.5rem;
+   width: 20rem;
+}
+
+#container {
+   display: flex;
+}
+
+#text-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+#other-tracks {
+   display: flex;
+   width: 60rem;
+   height: 15.5rem;
+   overflow: scroll;
+   margin: auto;
+}
+
+#other-tracks-container {
+   margin: auto;
+   display: flex;
+   width: 60rem;
+   flex-direction: column;
+   align-items: space-between;
+}
