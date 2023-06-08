@@ -30,6 +30,12 @@ export class CartComponent {
       console.log(p);
       this.cart = p;
       this.experiences = this.cart.experienceList;
+      let price: number = 0;
+      for(let i = 0; i < this.experiences.length; i++) {
+        price = price + this.experiences[i].price;
+        console.log(price);
+        this.totalPrice = price;
+      }
     });
     console.log(this.cart);
   }
