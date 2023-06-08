@@ -1,1 +1,32 @@
-<h1>{{ cart.id }}</h1>
+<div id="container">
+   <img id="cart-photo" src="../../../assets/F0-CartPage/WelcomeToYourCart.png">
+   <div class="experiences" *ngFor="let experience of experiences">
+      <div class="left">
+         <img class="experience-image" src="{{ experience.imageString }}">
+         <div class="text">
+            <h3>{{ experience.trackName }}</h3>
+            <h5>{{ experience.country }}</h5>
+            <p class="car">Car: {{ experience.car }}</p>
+            <p class="date">Date: {{ experience.date }}</p>
+            <p class="time">Time: {{ experience.time }}</p>
+         </div>
+      </div>
+      <div class="right">
+         <h5>PRICE</h5>
+         <p class="price">${{ experience.price }}</p>
+      </div>
+   </div>
+
+   <img id="racer-line" src="../../../assets/F0-CartPage/RacerLine.png">
+   <div id="container-bottom" class="experiences">
+      <div class="bottom-left">
+         <h3>PAYMENT METHOD</h3>
+         <label class="checks"><input type="checkbox">Edgar's Generosity</label>
+         <label class="checks"><input type="checkbox">Wishful Thinking</label>
+      </div>
+      <div class="bottom-right">
+         <h5 id="total">TOTAL</h5>
+         <p id="total-price">{{ totalPrice }}</p>
+      </div>
+   </div>
+</div>
