@@ -1,5 +1,7 @@
+import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CartService } from 'src/app/services/cart-api.service';
 import { ExperiencesService } from 'src/app/services/experiences-api.service';
 
 @Component({
@@ -9,23 +11,35 @@ import { ExperiencesService } from 'src/app/services/experiences-api.service';
 })
 export class IndividualExperiencesComponent implements OnInit{
   experiences: any;
-  experience: any ;
+  experience: any;
 
-  constructor(private route: ActivatedRoute, private experiencesService: ExperiencesService) { }
+
+
+
+  constructor(private route: ActivatedRoute, private experiencesService: ExperiencesService, private cartService: CartService) { }
   links: any = document.querySelectorAll('other-tracks-links');
-  
-  aGenericFunction(this: any, key: string) {
-    return this.doStuff(key);
+
+
+
+
+  buyExperience() {
+    let car = document.querySelector('select');
+    this.experience.car = car?.value;
+    this.experiencesService.updateExperience(this.experience, this.experience.id)
+    this.cartService.postCart(1, this.experience.id).subscribe((p: any) => {
+      this.experiencesService.updateExperience(this.experience.car, p.id).subscribe((c: any) => {
+        console.log(c);
+      });
+    });
   }
+
+
 
   ngOnInit(): void {
     this.experience = this.route.snapshot.paramMap.get('id');
     this.experiencesService.getOneExperience(this.experience).subscribe(p => {
       this.experience = p;
-      console.log(p);
     });
-    this.experiencesService.getAllExperiences().subscribe(p => {this.experiences = p
-      console.log(p);
-      });
+    this.experiencesService.getAllExperiences().subscribe(p => { this.experiences = p });
   }
 }

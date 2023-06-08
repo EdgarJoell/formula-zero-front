@@ -6,8 +6,6 @@ import { Injectable } from '@angular/core';
 export class ExperiencesService {
    constructor(private http: HttpClient) { }
 
-   experiences = this.getAllExperiences();
-
    getAllExperiences() {
       return this.http.get(
         `http://localhost:8080/api/experiences/`
@@ -19,4 +17,12 @@ export class ExperiencesService {
          `http://localhost:8080/api/experiences/${experienceId}/`
       );
    }
+
+   updateExperience(experienceObject: any, experienceId: number) {
+      console.log(experienceId, experienceObject);
+      return this.http.put(
+         `http://localhost:8080/api/update-experiences/${experienceId}/`, {car : experienceObject} );
+   }
+
+
 }

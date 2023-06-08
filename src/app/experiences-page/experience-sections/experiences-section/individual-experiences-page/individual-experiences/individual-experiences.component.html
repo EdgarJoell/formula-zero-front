@@ -4,21 +4,21 @@
       <h1>{{ experience.trackName }}, {{ experience.country }}</h1>
       <p>Date: {{ experience.date }}</p>
       <p>Price: ${{ experience.price }}</p>
-      <label for="cars">Choose a car:</label>
-      <select id="cars" name="cars">
-         <option value="choose a car...">choose a car...</option>
-         <option value="Red Bull Racing">Red Bull Racing</option>
-         <option value="Mercedes">Mercedes</option>
-         <option value="Aston Martin">Aston Martin</option>
-         <option value="Ferrari">Ferrari</option>
-         <option value="Alpine">Alpine</option>
-         <option value="Haas F1 Team">Haas f1 Team</option>
-         <option value="AlphaTauri">AlphaTauri</option>
-         <option value="Alfa Romeo">Alfa Romeo</option>
-         <option value="McLaren">McLaren</option>
-         <option value="Williams">Williams</option>
-      </select>
-      <a ><button id="add-to-cart">Add to Cart</button></a>
+         <label for="cars"></label>
+         <select id="cars" name="cars">
+            <option value="choose a car...">choose a car...</option>
+            <option value="Red Bull Racing" ng>Red Bull Racing</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Aston Martin">Aston Martin</option>
+            <option value="Ferrari">Ferrari</option>
+            <option value="Alpine">Alpine</option>
+            <option value="Haas F1 Team">Haas f1 Team</option>
+            <option value="AlphaTauri">AlphaTauri</option>
+            <option value="Alfa Romeo">Alfa Romeo</option>
+            <option value="McLaren">McLaren</option>
+            <option value="Williams">Williams</option>
+         </select>
+      <button id="add-to-cart" (click)="buyExperience()">Add To Cart</button>
    </div>
 </div>
 <div id="other-tracks-container">

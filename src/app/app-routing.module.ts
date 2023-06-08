@@ -19,7 +19,7 @@ const routes: Routes = [
       component: IndividualExperiencesComponent
    },
    {
-      path: 'experience-details/:id/cart',
+      path: 'cart/1',
       component: CartComponent
    }
 

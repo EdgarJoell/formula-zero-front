@@ -10,6 +10,7 @@ import { HomePageModule } from './home-page/home-page.module';
 import { ExperiencesPageModule } from './experiences-page/experiences-page.module';
 import { ExperiencesService } from './services/experiences-api.service';
 import { CartPageModule } from './cart-page/cart-page.module';
+import { CartService } from './services/cart-api.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { CartPageModule } from './cart-page/cart-page.module';
     HttpClientModule,
     CartPageModule
   ],
-  providers: [ExperiencesService],
+  providers: [ExperiencesService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
