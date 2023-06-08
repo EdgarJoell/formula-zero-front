@@ -19,9 +19,10 @@ export class ExperiencesService {
    }
 
    updateExperience(experienceObject: any, experienceId: number) {
-      console.log(experienceId, experienceObject);
+      console.log(experienceObject, experienceId);
       return this.http.put(
-         `http://localhost:8080/api/update-experiences/${experienceId}/`, {car : experienceObject} );
+         `http://localhost:8080/api/update-experiences/${experienceId}/`, { car : experienceObject } 
+      );
    }
 
 

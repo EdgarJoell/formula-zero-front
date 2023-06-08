@@ -25,11 +25,11 @@ export class IndividualExperiencesComponent implements OnInit{
   buyExperience() {
     let car = document.querySelector('select');
     this.experience.car = car?.value;
-    this.experiencesService.updateExperience(this.experience, this.experience.id)
-    this.cartService.postCart(1, this.experience.id).subscribe((p: any) => {
-      this.experiencesService.updateExperience(this.experience.car, p.id).subscribe((c: any) => {
-        console.log(c);
-      });
+    this.experiencesService.updateExperience(this.experience.car, this.experience.id).subscribe(car =>{
+      console.log(car)
+      this.cartService.postCart(1, this.experience.id).subscribe(cart => {
+        console.log(cart);
+      })
     });
   }
 
