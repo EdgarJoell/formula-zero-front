@@ -18,4 +18,10 @@ export class CartService {
          );
     }
 
+    removeFromCart(cartId: number, experienceId: number) {
+      return this.http.post(
+         `http://localhost:8080/api/cart/remove/${cartId}/${experienceId}/`, {}
+      );
+    }
+
 }

@@ -9,6 +9,7 @@
             <p class="car">Car: {{ experience.car }}</p>
             <p class="date">Date: {{ experience.date }}</p>
             <p class="time">Time: {{ experience.time }}</p>
+            <button class="remove-from-cart" (click)="removeExperience(experience.id)" onclick="location.reload()">Remove From Cart</button>
          </div>
       </div>
       <div class="right">
@@ -27,7 +28,7 @@
       <div class="bottom-right">
          <h5 id="total">TOTAL</h5>
          <p class="price">${{ totalPrice }}</p>
-         <a ><button>CHECK OUT NOW</button></a>
+         <a ><button class="btn">CHECK OUT NOW</button></a>
       </div>
    </div>
 </div>

@@ -14,13 +14,11 @@ export class CartComponent implements OnInit{
 
   totalPrice: number = 0;
 
-  calculateTotalPrice(): number {
-    let price: number = 0;
-    for(let i = 0; i < this.experiences.length; i++) {
-      price = price + this.experiences[i].price;
-      console.log(price);
-    }
-    return price;
+  removeExperience(experienceId: number): any {
+    this.cartService.removeFromCart(1, experienceId).subscribe(p => {
+      console.log(p);
+    })
+    this.ngOnInit();
   }
 
   ngOnInit(): void {

@@ -12,12 +12,19 @@ input {
    margin-right: 1rem;
 }
 
-button {
+.btn {
    background-color: #CA1004;
    color: white;
    border-radius: 30px;
    height: 4rem;
    width: 12rem;
+}
+
+.remove-from-cart {
+   width: 10rem;
+   height: 2.5rem;
+   background-color: #CA1004;
+   color: white;
 }
 
 .experience-image {
