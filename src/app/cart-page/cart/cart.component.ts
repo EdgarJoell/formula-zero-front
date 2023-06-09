@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ExperiencesService } from 'src/app/services/experiences-api.service';
 import { CartService } from 'src/app/services/cart-api.service';
 
 @Component({
@@ -8,11 +6,11 @@ import { CartService } from 'src/app/services/cart-api.service';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent {
+export class CartComponent implements OnInit{
   cart: any;
   experiences: any;
 
-  constructor(private route: ActivatedRoute, private experiencesService: ExperiencesService, private cartService: CartService) { }
+  constructor(private cartService: CartService) { }
 
   totalPrice: number = 0;
 
