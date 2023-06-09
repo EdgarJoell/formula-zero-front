@@ -1,0 +1,34 @@
+<div id="container">
+   <img class="presenter" src="{{ experience.imageString }}">
+   <div id="text-container">
+      <h1>{{ experience.trackName }}, {{ experience.country }}</h1>
+      <p>Date: {{ experience.date }}</p>
+      <p>Price: ${{ experience.price }}</p>
+         <label for="cars"></label>
+         <select id="cars" name="cars">
+            <option value="choose a car...">choose a car...</option>
+            <option value="Red Bull Racing" ng>Red Bull Racing</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Aston Martin">Aston Martin</option>
+            <option value="Ferrari">Ferrari</option>
+            <option value="Alpine">Alpine</option>
+            <option value="Haas F1 Team">Haas f1 Team</option>
+            <option value="AlphaTauri">AlphaTauri</option>
+            <option value="Alfa Romeo">Alfa Romeo</option>
+            <option value="McLaren">McLaren</option>
+            <option value="Williams">Williams</option>
+         </select>
+      <button id="add-to-cart" (click)="buyExperience()">Add To Cart</button>
+   </div>
+</div>
+<div id="other-tracks-container">
+   <h3>Take a look at our other experiences!</h3>
+   <div id="other-tracks">
+      <div *ngFor="let exp of experiences">
+         <div (click)="ngOnInit" onclick="location.reload()">
+            <a routerLink="/experience-details/{{ exp.id }}"><h3 class="other-tracks-links">{{ exp.trackName }}</h3></a>
+            <a routerLink="/experience-details/{{ exp.id }}"><img class="other-tracks-images" src="{{ exp.imageString }}"></a>
+         </div>
+      </div>
+   </div>
+</div>
